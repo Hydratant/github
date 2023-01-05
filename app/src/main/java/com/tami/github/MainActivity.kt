@@ -15,6 +15,7 @@ import com.tami.github.data.remote.GithubApi
 import com.tami.github.ui.theme.GithubTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -39,7 +40,8 @@ class MainActivity : ComponentActivity() {
         }
 
         lifecycleScope.launch {
-            githubApi.getUsersByQuery("a")
+            val result = githubApi.getUsersByQuery("a")
+            Timber.i("Timber Result : $result")
         }
     }
 }
