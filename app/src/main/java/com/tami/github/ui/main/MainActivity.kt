@@ -1,4 +1,4 @@
-package com.tami.github
+package com.tami.github.ui.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.lifecycleScope
-import com.tami.github.data.remote.GithubApi
+import com.tami.github.data.GithubRepository
 import com.tami.github.ui.theme.GithubTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -21,9 +21,8 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-
     @Inject
-    lateinit var githubApi: GithubApi
+    lateinit var repository: GithubRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,9 +38,10 @@ class MainActivity : ComponentActivity() {
             }
         }
 
+
         lifecycleScope.launch {
-            val result = githubApi.getUsersByQuery("a")
-            Timber.i("Timber Result : $result")
+            val result = repository.getUsersByQuery("a")
+            Timber.i("Timber : $result")
         }
     }
 }

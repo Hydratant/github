@@ -7,7 +7,7 @@ import retrofit2.http.Query
 interface GithubApi {
 
     @GET("/search/users")
-    suspend fun getUsersByQuery(
+    suspend fun getUsers(
         @Query("q") query: String
     ): GithubUserEntity
 }
