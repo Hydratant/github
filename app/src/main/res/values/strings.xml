@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Github</string>
+    <string name="avatar_description">프로필 이미지</string>
 </resources>

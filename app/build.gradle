@@ -87,6 +87,8 @@ dependencies {
     def compose_viewmodel_version = "2.5.1"
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$compose_viewmodel_version")
 
+    def coil_version = "2.2.2"
+    implementation("io.coil-kt:coil-compose:$coil_version")
 
     // Hilt
     implementation("com.google.dagger:hilt-android:$hilt_version")
