@@ -1,6 +1,7 @@
 package com.tami.github.ui.main
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
@@ -12,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.tami.github.data.GithubRepository
 import com.tami.github.entity.UserItemEntity
@@ -35,45 +37,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    UserItem(
-                        userItemEntity = UserItemEntity(
-                            "https://avatars.githubusercontent.com/u/45057577?v=4",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            0,
-                            "가나다라마바사",
-                            "",
-                            "",
-                            "",
-                            "",
-                            100.toDouble(),
-                            true,
-                            "",
-                            "",
-                            "",
-                            ""
-                        )
-                    )
+                    MainScreen()
                 }
             }
         }
-    }
-}
-
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    GithubTheme {
-        Greeting("Android")
     }
 }

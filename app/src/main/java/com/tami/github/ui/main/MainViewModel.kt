@@ -24,6 +24,9 @@ class MainViewModel @Inject constructor(
     private val _users = MutableLiveData<List<UserItemEntity>>()
     val users: LiveData<List<UserItemEntity>> get() = _users
 
+    init {
+        getUsersByQuery("bb")
+    }
 
     fun getUsersByQuery(query: String) {
         viewModelScope.launch {
