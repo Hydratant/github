@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "841209488451",
+    "project_id": "githubsample-a2603",
+    "storage_bucket": "githubsample-a2603.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841209488451:android:a36ac4d767cddd05ace0f6",
+        "android_client_info": {
+          "package_name": "com.tami.github"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841209488451-05ok45eb7cv7oalt4o2l7ugqr6vn444k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ1YOrcVa7GBfw-DBr_Tn3mTeEroQw42U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841209488451-05ok45eb7cv7oalt4o2l7ugqr6vn444k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
