@@ -68,6 +68,9 @@ freeline/
 freeline_project_description.json
 
 # fastlane
+fastlane/Appfile
+fastlane/Pluginfile
+fastlane/Fastfile
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
@@ -229,6 +232,10 @@ fabric.properties
 ./gradle/wrapper/gradle-wrapper.properties
 /app/src/main/java/com/tami/tft/net/Const.kt
 !/Arxan
+
+
+#release
+release/pc-api-8384158519325888679-744-365ba8eb84b1.json
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 
