@@ -2,17 +2,21 @@ name: Android CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "develop" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "develop" ]
 
 jobs:
   build:
-
+    # 해당 Job을 리눅스 환경에서 사용
     runs-on: ubuntu-latest
 
+
     steps:
+     # 해당 프로젝트를 리눅스 환경에 checkout
     - uses: actions/checkout@v3
+
+    # JDK Setting
     - name: set up JDK 11
       uses: actions/setup-java@v3
       with:
@@ -23,7 +27,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
-    # UnitTest
+    # UnitTest 실행
     - name: Run unit tests
       run: ./gradlew testDebugUnitTest
 
