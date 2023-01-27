@@ -1,5 +1,6 @@
 name: Android CI
 
+# develop branch에서 push, pull_request Event가 일어날 때 실행시킨다.
 on:
   push:
     branches: [ "develop" ]
@@ -10,7 +11,6 @@ jobs:
   build:
     # 해당 Job을 리눅스 환경에서 사용
     runs-on: ubuntu-latest
-
 
     steps:
      # 해당 프로젝트를 리눅스 환경에 checkout
@@ -24,6 +24,7 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
+    # Gradlew 에 접근할 수 있도록 chmod 설정
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
